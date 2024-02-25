@@ -1,3 +1,3 @@
 [build]
-  command = "GOARCH=amd64 GOOS=windows go build -o functions/handler handler.go"
+  command = "GOARCH=amd64 GOOS=windows go build -o ./functions/handlers handlers.go"
   functions = "functions"
