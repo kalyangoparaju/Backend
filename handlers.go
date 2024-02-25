@@ -39,3 +39,21 @@
 // 	}
 // 	fmt.Printf("Value of field %s for key %s: %s\n", field, userKey, username)
 // }
+// handler.go
+package main
+
+import (
+    "net/http"
+)
+
+func handler(w http.ResponseWriter, r *http.Request) {
+    // Your API endpoint logic here
+    // Example:
+    w.WriteHeader(http.StatusOK)
+    w.Write([]byte("Hello from Go serverless function!"))
+}
+
+func main() {
+    http.HandleFunc("/api/endpoint", handler)
+    http.ListenAndServe(":8080", nil)
+}
